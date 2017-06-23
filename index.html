@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Rock Paper</title>
+	<title>Rock Paper Scissors</title>
 </head>
 <body>
+
+	<h1>press r, p, or s to play</h1>
+
+	<br>
+	<br>
+
+	<h2>You chose: <span id="user-Text"></span>
+
+	<br>
+	<br>
+
+	<h2>Computer chose: <span id="computer-Choice"></span></h2>
+
+	<br>
+	<br>
+
+	<h2>Wins!: <span id="user-Wins"></span></h2>
+
+	<br>
+	<br>
+
+	<h2>Lossess...: <span id="user-Losses"></span></h2>
+
+	<br>
+	<br>
+
+	<h2>Ties: <span id="user-Ties"></span></h2>
+
+
+
+
+
+
+
+
+
+
+	<script type = "text/javascript">
+
+	var userText = document.getElementById("user-Text");
+	var computerChoice = document.getElementById("computer-Choice");
+	var choices = ["r","p","s"];
+		
+	document.onkeyup = function(event) {
+		userText.textContent = event.key;
+
+		// if statement that only allows user to press r, p, s
+
+		var randomNumber = Math.floor(Math.random()*choices.length);
+		console.log(randomNumber)
+		computerChoice.textContent = choices[randomNumber]
+
+
+		// build out logic that determines if it is a win or a loss. Then add 1 to either win, loss, or tie.
+
+
+
+
+	}
+
+
+	</script>
+
+
+
 	
 </body>
 </html>
